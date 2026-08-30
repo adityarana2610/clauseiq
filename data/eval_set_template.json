@@ -1,0 +1,135 @@
+[
+  {
+    "id": "Q001",
+    "question": "What is the annual deductible for flood damage in a standard home insurance policy?",
+    "expected_answer": "The annual deductible for flood damage is $2,500.",
+    "expected_document": "policy_home_standard_001",
+    "expected_page": 4,
+    "doc_type": "policy",
+    "category": "deductibles",
+    "is_answerable": true
+  },
+  {
+    "id": "Q002",
+    "question": "Does the policy cover damage caused by mold?",
+    "expected_answer": "Mold damage is excluded unless it results directly from a covered water event.",
+    "expected_document": "policy_home_standard_001",
+    "expected_page": 7,
+    "doc_type": "policy",
+    "category": "exclusions",
+    "is_answerable": true
+  },
+  {
+    "id": "Q003",
+    "question": "What is the liability coverage limit under the basic home policy?",
+    "expected_answer": "The liability coverage limit is $100,000 per occurrence.",
+    "expected_document": "policy_home_standard_001",
+    "expected_page": 3,
+    "doc_type": "policy",
+    "category": "coverage_limits",
+    "is_answerable": true
+  },
+  {
+    "id": "Q004",
+    "question": "How many days does the policyholder have to file a claim after an incident?",
+    "expected_answer": "The policyholder must file a claim within 60 days of the incident.",
+    "expected_document": "policy_home_standard_001",
+    "expected_page": 9,
+    "doc_type": "policy",
+    "category": "claims",
+    "is_answerable": true
+  },
+  {
+    "id": "Q005",
+    "question": "What personal property coverage limit applies to jewelry and watches?",
+    "expected_answer": "Jewelry and watches are covered up to $1,500 unless a scheduled endorsement is added.",
+    "expected_document": "policy_home_standard_001",
+    "expected_page": 5,
+    "doc_type": "policy",
+    "category": "coverage_limits",
+    "is_answerable": true
+  },
+  {
+    "id": "Q006",
+    "question": "Is earthquake damage covered by default under the standard home policy?",
+    "expected_answer": "Earthquake damage is not covered under the standard policy. A separate earthquake endorsement must be purchased.",
+    "expected_document": "policy_home_standard_001",
+    "expected_page": 7,
+    "doc_type": "policy",
+    "category": "exclusions",
+    "is_answerable": true
+  },
+  {
+    "id": "Q007",
+    "question": "What is the grace period for premium payments?",
+    "expected_answer": "The policy has a 30-day grace period for premium payments.",
+    "expected_document": "policy_home_standard_001",
+    "expected_page": 2,
+    "doc_type": "policy",
+    "category": "payment",
+    "is_answerable": true
+  },
+  {
+    "id": "Q008",
+    "question": "Are home-based businesses covered under the policy?",
+    "expected_answer": "Business equipment in the home is excluded from coverage. A separate business owners policy is required.",
+    "expected_document": "policy_home_standard_001",
+    "expected_page": 8,
+    "doc_type": "policy",
+    "category": "exclusions",
+    "is_answerable": true
+  },
+  {
+    "id": "Q009",
+    "question": "What does the flood endorsement add to the base policy?",
+    "expected_answer": "The flood endorsement adds $50,000 in building coverage and $25,000 in contents coverage for flood events.",
+    "expected_document": "endorsement_flood_001",
+    "expected_page": 1,
+    "doc_type": "endorsement",
+    "category": "coverage_limits",
+    "is_answerable": true
+  },
+  {
+    "id": "Q010",
+    "question": "What is the waiting period before flood endorsement coverage takes effect?",
+    "expected_answer": "There is a 30-day waiting period from the endorsement effective date.",
+    "expected_document": "endorsement_flood_001",
+    "expected_page": 2,
+    "doc_type": "endorsement",
+    "category": "waiting_period",
+    "is_answerable": true
+  },
+  {
+    "id": "UNANSWERABLE_001",
+    "question": "What is the CEO's name of the insurance company?",
+    "expected_answer": null,
+    "expected_document": null,
+    "expected_page": null,
+    "doc_type": null,
+    "category": "unanswerable",
+    "is_answerable": false,
+    "reason": "CEO names are not mentioned in insurance policy documents"
+  },
+  {
+    "id": "UNANSWERABLE_002",
+    "question": "What is the current stock price of the insurer?",
+    "expected_answer": null,
+    "expected_document": null,
+    "expected_page": null,
+    "doc_type": null,
+    "category": "unanswerable",
+    "is_answerable": false,
+    "reason": "Financial market data is not in the documents"
+  },
+  {
+    "id": "UNANSWERABLE_003",
+    "question": "Will the policy cover damage from a future pandemic?",
+    "expected_answer": null,
+    "expected_document": null,
+    "expected_page": null,
+    "doc_type": null,
+    "category": "unanswerable",
+    "is_answerable": false,
+    "reason": "Pandemic-specific future coverage prediction is not in the documents"
+  }
+]

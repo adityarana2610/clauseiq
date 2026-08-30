@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Environment
+.env
+venv/
+.venv/
+env/
+
+# Data (don't commit PDFs or the FAISS index)
+data/raw_pdfs/
+data/faiss_index*
+
+# IDE
+.idea/
+.vscode/
+*.code-workspace
+
+# Streamlit
+.streamlit/
+
+# Notebooks output
+notebooks/**/*.ipynb_checkpoints
+
+# OS
+.DS_Store
+Thumbs.db
