@@ -1,0 +1,512 @@
+[
+  {
+    "id": "Q001",
+    "question": "What is the annual deductible for flood damage in the standard homeowners policy?",
+    "expected_answer": "The annual deductible for flood damage is $2,500 (if endorsed).",
+    "expected_document": "policy_home_standard_001",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "deductibles",
+    "is_answerable": true
+  },
+  {
+    "id": "Q002",
+    "question": "What is the personal liability coverage limit under the standard homeowners policy?",
+    "expected_answer": "The personal liability limit is $100,000 per occurrence.",
+    "expected_document": "policy_home_standard_001",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "coverage_limits",
+    "is_answerable": true
+  },
+  {
+    "id": "Q003",
+    "question": "How many days does the standard home policyholder have to file a claim after an incident?",
+    "expected_answer": "All claims under the standard policy must be filed within 45 days of the incident.",
+    "expected_document": "policy_home_standard_001",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "claims",
+    "is_answerable": true
+  },
+  {
+    "id": "Q004",
+    "question": "What is the maximum temporary housing duration under the standard homeowners policy?",
+    "expected_answer": "Temporary housing coverage is strictly limited to 14 days of accommodation.",
+    "expected_document": "policy_home_standard_001",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "coverage_limits",
+    "is_answerable": true
+  },
+  {
+    "id": "Q005",
+    "question": "What is the cancellation notice period for non-payment of premium under the standard home policy?",
+    "expected_answer": "If the Company cancels for non-payment of Premium, at least 10 days' notice will be given.",
+    "expected_document": "policy_home_standard_001",
+    "expected_page": 3,
+    "doc_type": "policy",
+    "category": "general_conditions",
+    "is_answerable": true
+  },
+  {
+    "id": "Q006",
+    "question": "What is the dwelling coverage limit for the premium homeowners policy?",
+    "expected_answer": "The maximum claim payout (Dwelling limit) is $750,000 per incident.",
+    "expected_document": "policy_home_premium_002",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "coverage_limits",
+    "is_answerable": true
+  },
+  {
+    "id": "Q007",
+    "question": "What co-payment applies to replacement cost adjustments for old personal property in the premium homeowners policy?",
+    "expected_answer": "A 10% co-payment applies to replacement cost adjustments for personal property older than 5 years.",
+    "expected_document": "policy_home_premium_002",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "deductibles",
+    "is_answerable": true
+  },
+  {
+    "id": "Q008",
+    "question": "How long is the temporary housing coverage under the premium home policy?",
+    "expected_answer": "Temporary housing coverage is provided for up to 45 days of accommodation, including coverage for pet boarding.",
+    "expected_document": "policy_home_premium_002",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "coverage_limits",
+    "is_answerable": true
+  },
+  {
+    "id": "Q009",
+    "question": "What claim form must be submitted for the premium homeowners policy?",
+    "expected_answer": "Claimant must submit Form 10-HP to the priority claims department.",
+    "expected_document": "policy_home_premium_002",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "claims",
+    "is_answerable": true
+  },
+  {
+    "id": "Q010",
+    "question": "What is the bodily injury liability limit per person under the basic automobile policy?",
+    "expected_answer": "Bodily Injury Liability is $50,000 per person / $100,000 per accident.",
+    "expected_document": "policy_motor_basic_001",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "coverage_limits",
+    "is_answerable": true
+  },
+  {
+    "id": "Q011",
+    "question": "What is the glass repair co-payment under the basic automobile policy?",
+    "expected_answer": "Any glass repair requires a 20% co-payment from the policyholder.",
+    "expected_document": "policy_motor_basic_001",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "deductibles",
+    "is_answerable": true
+  },
+  {
+    "id": "Q012",
+    "question": "Is rental car reimbursement covered under the basic auto policy?",
+    "expected_answer": "Rental Car Reimbursement: 0 days (Not covered under the Basic Tier).",
+    "expected_document": "policy_motor_basic_001",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "coverage_limits",
+    "is_answerable": true
+  },
+  {
+    "id": "Q013",
+    "question": "What is the towing reimbursement limit for the basic motor policy?",
+    "expected_answer": "Towing and Labor is reimbursed up to a maximum of $50 per disablement.",
+    "expected_document": "policy_motor_basic_001",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "coverage_limits",
+    "is_answerable": true
+  },
+  {
+    "id": "Q014",
+    "question": "What is the collision deductible for the comprehensive automobile policy?",
+    "expected_answer": "For collision and comprehensive coverages, a low $500 deductible per incident applies.",
+    "expected_document": "policy_motor_comprehensive_002",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "deductibles",
+    "is_answerable": true
+  },
+  {
+    "id": "Q015",
+    "question": "How many days of rental car coverage does the comprehensive auto policy provide?",
+    "expected_answer": "Coverage provided for up to 30 days at a maximum of $60 per day while the vehicle is being repaired.",
+    "expected_document": "policy_motor_comprehensive_002",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "coverage_limits",
+    "is_answerable": true
+  },
+  {
+    "id": "Q016",
+    "question": "What is the property damage liability limit under the comprehensive automobile policy?",
+    "expected_answer": "Property Damage Liability limit is $100,000 per accident.",
+    "expected_document": "policy_motor_comprehensive_002",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "coverage_limits",
+    "is_answerable": true
+  },
+  {
+    "id": "Q017",
+    "question": "What form must be submitted with claims for the comprehensive auto policy?",
+    "expected_answer": "Detailed estimates must be submitted via Form Auto-C2.",
+    "expected_document": "policy_motor_comprehensive_002",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "claims",
+    "is_answerable": true
+  },
+  {
+    "id": "Q018",
+    "question": "What is the annual deductible for the individual health plan?",
+    "expected_answer": "The annual deductible is $3,000 per calendar year.",
+    "expected_document": "policy_health_individual_001",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "deductibles",
+    "is_answerable": true
+  },
+  {
+    "id": "Q019",
+    "question": "What is the emergency room co-pay under the individual health policy?",
+    "expected_answer": "Emergency Room (ER) co-pay is $300 per visit (waived if admitted).",
+    "expected_document": "policy_health_individual_001",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "deductibles",
+    "is_answerable": true
+  },
+  {
+    "id": "Q020",
+    "question": "What is the waiting period for pre-existing conditions under the individual health plan?",
+    "expected_answer": "A mandatory 180-day waiting period applies before pre-existing condition coverage begins.",
+    "expected_document": "policy_health_individual_001",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "waiting_period",
+    "is_answerable": true
+  },
+  {
+    "id": "Q021",
+    "question": "What is the coinsurance for Tier 3 brand-name medications in the individual health plan?",
+    "expected_answer": "Prescription Drugs: 30% coinsurance for Tier 3 brand-name medications.",
+    "expected_document": "policy_health_individual_001",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "deductibles",
+    "is_answerable": true
+  },
+  {
+    "id": "Q022",
+    "question": "What is the maximum out-of-pocket limit for the family health plan?",
+    "expected_answer": "Maximum out-of-pocket limit is $4,500 per family per calendar year.",
+    "expected_document": "policy_health_family_002",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "coverage_limits",
+    "is_answerable": true
+  },
+  {
+    "id": "Q023",
+    "question": "What is the primary care physician co-pay for the family health plan?",
+    "expected_answer": "Primary Care Physician (PCP) visit co-pay is $20 per visit.",
+    "expected_document": "policy_health_family_002",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "deductibles",
+    "is_answerable": true
+  },
+  {
+    "id": "Q024",
+    "question": "Do dependents under 18 have a waiting period for pre-existing conditions in the family health plan?",
+    "expected_answer": "Dependents under 18 have no waiting period for pre-existing conditions.",
+    "expected_document": "policy_health_family_002",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "waiting_period",
+    "is_answerable": true
+  },
+  {
+    "id": "Q025",
+    "question": "How many days does a family plan member have to file out-of-network claims?",
+    "expected_answer": "Out-of-network claims must be filed within 365 days of the date of service using Medical Form M-200F.",
+    "expected_document": "policy_health_family_002",
+    "expected_page": 1,
+    "doc_type": "policy",
+    "category": "claims",
+    "is_answerable": true
+  },
+  {
+    "id": "Q026",
+    "question": "What is the maximum claim payout for flood damage under the flood endorsement?",
+    "expected_answer": "Maximum claim payout for flood damage is $50,000 per incident.",
+    "expected_document": "endorsement_flood_addon_001",
+    "expected_page": 1,
+    "doc_type": "endorsement",
+    "category": "coverage_limits",
+    "is_answerable": true
+  },
+  {
+    "id": "Q027",
+    "question": "What is the deductible specific to flood damage claims under the flood endorsement?",
+    "expected_answer": "A separate and distinct $5,000 annual deductible applies specifically to flood damage claims.",
+    "expected_document": "endorsement_flood_addon_001",
+    "expected_page": 1,
+    "doc_type": "endorsement",
+    "category": "deductibles",
+    "is_answerable": true
+  },
+  {
+    "id": "Q028",
+    "question": "What is the waiting period before flood endorsement coverage takes effect?",
+    "expected_answer": "Coverage does not take effect until a strict 30-day waiting period has elapsed from the date of purchase.",
+    "expected_document": "endorsement_flood_addon_001",
+    "expected_page": 1,
+    "doc_type": "endorsement",
+    "category": "waiting_period",
+    "is_answerable": true
+  },
+  {
+    "id": "Q029",
+    "question": "What is the maximum payout for catastrophic natural disaster claims?",
+    "expected_answer": "Maximum claim payout for catastrophic natural disaster is $150,000 per incident.",
+    "expected_document": "endorsement_natural_disaster_002",
+    "expected_page": 1,
+    "doc_type": "endorsement",
+    "category": "coverage_limits",
+    "is_answerable": true
+  },
+  {
+    "id": "Q030",
+    "question": "What natural disasters are covered by the catastrophic disaster endorsement?",
+    "expected_answer": "This endorsement covers direct physical loss by Earthquakes, Sinkholes, and Volcanic Eruption.",
+    "expected_document": "endorsement_natural_disaster_002",
+    "expected_page": 1,
+    "doc_type": "endorsement",
+    "category": "coverage_limits",
+    "is_answerable": true
+  },
+  {
+    "id": "Q031",
+    "question": "Are tsunamis covered under the natural disaster endorsement?",
+    "expected_answer": "No. Tsunamis or tidal waves are not covered and require a separate marine endorsement.",
+    "expected_document": "endorsement_natural_disaster_002",
+    "expected_page": 1,
+    "doc_type": "endorsement",
+    "category": "exclusions",
+    "is_answerable": true
+  },
+  {
+    "id": "Q032",
+    "question": "How soon must a claimant provide initial notice of loss under standard tier policies?",
+    "expected_answer": "The claimant must provide initial notice of loss within 24 hours of discovering the incident.",
+    "expected_document": "claim_process_guidelines_001",
+    "expected_page": 1,
+    "doc_type": "claim",
+    "category": "claims",
+    "is_answerable": true
+  },
+  {
+    "id": "Q033",
+    "question": "What form must be submitted with a standard tier insurance claim?",
+    "expected_answer": "Claimant must submit Form 27-B along with photographic evidence of the damage.",
+    "expected_document": "claim_process_guidelines_001",
+    "expected_page": 1,
+    "doc_type": "claim",
+    "category": "claims",
+    "is_answerable": true
+  },
+  {
+    "id": "Q034",
+    "question": "How many days does the insurance company have to provide an initial response to a standard tier claim?",
+    "expected_answer": "The Company guarantees an initial adjustment response and preliminary coverage determination within 15 days of receiving all required documentation.",
+    "expected_document": "claim_process_guidelines_001",
+    "expected_page": 1,
+    "doc_type": "claim",
+    "category": "claims",
+    "is_answerable": true
+  },
+  {
+    "id": "Q035",
+    "question": "How long does a premium tier policyholder have to submit supporting documentation for a claim?",
+    "expected_answer": "The policyholder has up to 60 days to submit all supporting documentation, expert assessments, and mitigation invoices.",
+    "expected_document": "claim_process_timeline_002",
+    "expected_page": 1,
+    "doc_type": "claim",
+    "category": "claims",
+    "is_answerable": true
+  },
+  {
+    "id": "Q036",
+    "question": "What is the appeal window for denied premium tier claims?",
+    "expected_answer": "The premium policyholder has a generous 90-day window to file a formal appeal or invoke the arbitration clause.",
+    "expected_document": "claim_process_timeline_002",
+    "expected_page": 1,
+    "doc_type": "claim",
+    "category": "claims",
+    "is_answerable": true
+  },
+  {
+    "id": "Q037",
+    "question": "How soon must a premium tier claimant provide initial notice of loss?",
+    "expected_answer": "The claimant must provide initial notice of loss within 72 hours of discovering the incident.",
+    "expected_document": "claim_process_timeline_002",
+    "expected_page": 1,
+    "doc_type": "claim",
+    "category": "claims",
+    "is_answerable": true
+  },
+  {
+    "id": "Q038",
+    "question": "Does the general exclusion schedule cover damage from pest infestations?",
+    "expected_answer": "No. Damage caused by rodents, insects, termites, bedbugs, or domestic pets is excluded.",
+    "expected_document": "exclusion_general_001",
+    "expected_page": 1,
+    "doc_type": "exclusion",
+    "category": "exclusions",
+    "is_answerable": true
+  },
+  {
+    "id": "Q039",
+    "question": "Which policies does the general exclusion schedule apply to?",
+    "expected_answer": "The general exclusion schedule applies to policies with limits under $250,000.",
+    "expected_document": "exclusion_general_001",
+    "expected_page": 1,
+    "doc_type": "exclusion",
+    "category": "exclusions",
+    "is_answerable": true
+  },
+  {
+    "id": "Q040",
+    "question": "Are cyber attacks covered under the high-risk exclusion schedule?",
+    "expected_answer": "No. Data breaches, ransomware, hacking events, or loss of digital assets/cryptocurrency are excluded, regardless of the entry vector.",
+    "expected_document": "exclusion_high_risk_002",
+    "expected_page": 1,
+    "doc_type": "exclusion",
+    "category": "exclusions",
+    "is_answerable": true
+  },
+  {
+    "id": "UNANSWERABLE_001",
+    "question": "What is the CEO's name of the insurance company?",
+    "expected_answer": null,
+    "expected_document": null,
+    "expected_page": null,
+    "doc_type": null,
+    "category": "unanswerable",
+    "is_answerable": false,
+    "reason": "CEO names are not mentioned in insurance policy documents"
+  },
+  {
+    "id": "UNANSWERABLE_002",
+    "question": "What is the current stock price of the insurer?",
+    "expected_answer": null,
+    "expected_document": null,
+    "expected_page": null,
+    "doc_type": null,
+    "category": "unanswerable",
+    "is_answerable": false,
+    "reason": "Financial market data is not in the documents"
+  },
+  {
+    "id": "UNANSWERABLE_003",
+    "question": "Will the policy cover damage from a future pandemic?",
+    "expected_answer": null,
+    "expected_document": null,
+    "expected_page": null,
+    "doc_type": null,
+    "category": "unanswerable",
+    "is_answerable": false,
+    "reason": "Speculative future coverage questions cannot be answered from policy text"
+  },
+  {
+    "id": "UNANSWERABLE_004",
+    "question": "What is the annual revenue of the insurance company?",
+    "expected_answer": null,
+    "expected_document": null,
+    "expected_page": null,
+    "doc_type": null,
+    "category": "unanswerable",
+    "is_answerable": false,
+    "reason": "Company financials are not part of policy documents"
+  },
+  {
+    "id": "UNANSWERABLE_005",
+    "question": "What email address should claims be sent to?",
+    "expected_answer": null,
+    "expected_document": null,
+    "expected_page": null,
+    "doc_type": null,
+    "category": "unanswerable",
+    "is_answerable": false,
+    "reason": "Contact information such as email addresses is not in the documents"
+  },
+  {
+    "id": "UNANSWERABLE_006",
+    "question": "What is the interest rate charged on late premium payments?",
+    "expected_answer": null,
+    "expected_document": null,
+    "expected_page": null,
+    "doc_type": null,
+    "category": "unanswerable",
+    "is_answerable": false,
+    "reason": "Interest rates on late payments are not specified in the policy documents"
+  },
+  {
+    "id": "UNANSWERABLE_007",
+    "question": "Can the insurance policy be transferred to another person?",
+    "expected_answer": null,
+    "expected_document": null,
+    "expected_page": null,
+    "doc_type": null,
+    "category": "unanswerable",
+    "is_answerable": false,
+    "reason": "Policy transfer rules are not addressed in the documents"
+  },
+  {
+    "id": "UNANSWERABLE_008",
+    "question": "What is the company's historical claims approval rate?",
+    "expected_answer": null,
+    "expected_document": null,
+    "expected_page": null,
+    "doc_type": null,
+    "category": "unanswerable",
+    "is_answerable": false,
+    "reason": "Claims statistics are not part of the policy or claims documents"
+  },
+  {
+    "id": "UNANSWERABLE_009",
+    "question": "What are the names and qualifications of the insurance adjusters?",
+    "expected_answer": null,
+    "expected_document": null,
+    "expected_page": null,
+    "doc_type": null,
+    "category": "unanswerable",
+    "is_answerable": false,
+    "reason": "Personnel information is not in the policy documents"
+  },
+  {
+    "id": "UNANSWERABLE_010",
+    "question": "Does the policy cover property damage that occurs in a foreign country?",
+    "expected_answer": null,
+    "expected_document": null,
+    "expected_page": null,
+    "doc_type": null,
+    "category": "unanswerable",
+    "is_answerable": false,
+    "reason": "International coverage territory is not defined in the documents"
+  }
+]

@@ -14,7 +14,6 @@ from app.ingestion.chunker import chunk_pages
 from app.retrieval.embedder import Embedder
 from app.retrieval.vector_store import VectorStore
 from app.retrieval.reranker import Reranker
-from app.generation.llm import MistralLLM
 
 
 class RAGPipeline:
@@ -41,6 +40,7 @@ class RAGPipeline:
         reranker_top_k: int = 5,
         use_reranker: bool = True,
         mistral_api_key: str | None = None,
+        skip_llm: bool = False,
     ):
         self.chunk_size = chunk_size
         self.chunk_overlap = chunk_overlap
@@ -51,7 +51,17 @@ class RAGPipeline:
         self.embedder = Embedder(model_name=embedding_model)
         self.vector_store = VectorStore(dimension=self.embedder.dimension)
         self.reranker = Reranker() if use_reranker else None
-        self.llm = MistralLLM(api_key=mistral_api_key, model=mistral_model)
+
+        # Lazy LLM init — only load when needed (skip for ingestion/retrieval-only eval)
+        self.llm = None
+        self._mistral_model = mistral_model
+        self._mistral_api_key = mistral_api_key
+        if not skip_llm:
+            try:
+                from app.generation.llm import MistralLLM
+                self.llm = MistralLLM(api_key=mistral_api_key, model=mistral_model)
+            except Exception as e:
+                print(f"  LLM not available (ok for retrieval-only): {e}")
 
     # ─── Ingestion ────────────────────────────────────────────────────────────
 
@@ -195,17 +205,11 @@ class RAGPipeline:
     def load(
         cls,
         path: str | Path,
-        mistral_api_key: str | None = None,
-        mistral_model: str = "mistral-small-latest",
-        use_reranker: bool = True,
+        **kwargs,
     ) -> "RAGPipeline":
         """Load a previously saved pipeline from disk."""
         store = VectorStore.load(path)
-        pipeline = cls(
-            mistral_api_key=mistral_api_key,
-            mistral_model=mistral_model,
-            use_reranker=use_reranker,
-        )
+        pipeline = cls(**kwargs)
         pipeline.vector_store = store
         return pipeline
 

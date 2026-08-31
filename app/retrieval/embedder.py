@@ -21,7 +21,7 @@ class Embedder:
         self.model = SentenceTransformer(model_name)
         self.model_name = model_name
         self.dimension = self.model.get_sentence_embedding_dimension()
-        print(f"  → Embedding dimension: {self.dimension}")
+        print(f"  -> Embedding dimension: {self.dimension}")
 
     def embed(self, texts: list[str], batch_size: int = 64) -> np.ndarray:
         """

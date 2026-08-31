@@ -15,6 +15,8 @@ env/
 
 # Data (don't commit PDFs or the FAISS index)
 data/raw_pdfs/
+raw_pdfs_v1/
+raw_pdfs_v2/
 data/faiss_index*
 
 # IDE

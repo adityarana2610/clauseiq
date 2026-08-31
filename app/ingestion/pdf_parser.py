@@ -68,9 +68,9 @@ def extract_all_pdfs(pdf_dir: str | Path) -> list[dict]:
         try:
             pages = extract_pages(pdf_path)
             all_pages.extend(pages)
-            print(f"  ✓ {pdf_path.name}: {len(pages)} pages extracted")
+            print(f"  [OK] {pdf_path.name}: {len(pages)} pages extracted")
         except Exception as e:
-            print(f"  ✗ {pdf_path.name}: Failed — {e}")
+            print(f"  [FAIL] {pdf_path.name}: Failed — {e}")
 
     print(f"\nTotal pages extracted: {len(all_pages)}")
     return all_pages
