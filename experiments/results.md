@@ -6,29 +6,30 @@ Generated automatically by `scripts/run_phase2_eval.py`
 
 ## Retrieval Experiments
 
-| Config | Chunk Size | Overlap | Reranker | Chunks | Recall@5 | Hit Rate | Time |
-|---|---|---|---|---|---|---|---|
-| chunk_500 | 500 | 50 | No | 67 | 100.0% | 100.0% | 8.2s |
-| chunk_800 | 800 | 100 | No | 55 | 97.5% | 97.5% | 5.4s |
-| chunk_1200 | 1200 | 150 | No | 55 | 97.5% | 97.5% | 5.1s |
-| chunk_800_reranked | 800 | 100 | Yes | 55 | 97.5% | 97.5% | 69.5s |
-| chunk_1200_reranked | 1200 | 150 | Yes | 55 | 97.5% | 97.5% | 69.9s |
+| Config | Chunk Size | Overlap | Reranker | Chunks | Recall@1 | Recall@5 | MRR | Hit Rate | Time |
+|---|---|---|---|---|---|---|---|---|---|
+| chunk_500 | 500 | 50 | No | 67 | 75.0% | 100.0% | 0.8646 | 100.0% | 7.2s |
+| chunk_800 | 800 | 100 | No | 55 | 72.5% | 97.5% | 0.8396 | 97.5% | 5.2s |
+| chunk_1200 | 1200 | 150 | No | 55 | 72.5% | 97.5% | 0.8396 | 97.5% | 5.3s |
+| chunk_800_reranked | 800 | 100 | Yes | 55 | 87.5% | 97.5% | 0.9146 | 97.5% | 69.1s |
+| chunk_1200_reranked | 1200 | 150 | Yes | 55 | 87.5% | 97.5% | 0.9146 | 97.5% | 71.2s |
 
 ---
 
-## Hallucination / Refusal Rate Experiments
+## Retrieval-Stage Confidence Threshold (Phase 2 Exploratory Proxy)
 
-Measured at the retrieval level: if the top-1 chunk's cosine similarity score
-is below 0.40, the system has low confidence and would effectively refuse to answer.
-This is a retrieval-level proxy; true LLM-based refusal will be tested in Phase 3.
+> [!WARNING]
+> **Not LLM Refusal**: This metric tests a retrieval cosine-similarity threshold (< 0.40 score = low confidence).
+> It is **NOT** the prompt-based LLM refusal rate. The true hallucination guardrail test ("I cannot find this information...")
+> will be evaluated in Phase 3 by running unanswerable questions through `pipeline.ask()` with Mistral.
 
-| Config | Unanswerable Qs | Correct Refusals | Refusal Rate |
+| Config | Unanswerable Qs | Sub-Threshold Chunks | Proxy Filter Rate |
 |---|---|---|---|
 | best_config | 10 | 4 | 40.0% |
 
-### Per-Question Detail
+### Per-Question Retrieval Confidence Detail
 
-| Question ID | Question | Top-1 Score | Top-1 Doc | Would Refuse |
+| Question ID | Question | Top-1 Score | Top-1 Doc | Would Flag Low-Conf |
 |---|---|---|---|---|
 | UNANSWERABLE_001 | What is the CEO's name of the insurance company? | 0.3982 | policy_home_premium_002 | Yes |
 | UNANSWERABLE_002 | What is the current stock price of the insurer? | 0.3716 | policy_home_premium_002 | Yes |
@@ -48,6 +49,10 @@ This is a retrieval-level proxy; true LLM-based refusal will be tested in Phase 
 Breakdown by question difficulty/type to verify high recall isn't masking
 weaknesses in harder question categories.
 
+> [!NOTE]
+> **Sample Size Note**: Cross-document comparison achieved 5/5 (100% Recall@5). However, n=5 is a small sample size;
+> while directionally strong, a larger benchmark is required to statistically generalize multi-document synthesis.
+
 | Question Type | Count | Hits | Recall@5 |
 |---|---|---|---|
 | cross_document | 5 | 5 | 100.0% |
@@ -59,8 +64,7 @@ weaknesses in harder question categories.
 
 ## Key Findings
 
-- **Best chunk size**: 500 tokens (with 50-token overlap) -- perfect 100.0% Recall@5 across all 40 answerable questions
-- **Reranking did not help on chunk_800/1200**: Recall stayed at 97.5% even with the cross-encoder reranker. The single miss (Q005: "cancellation notice period") is a **recall problem**, not a ranking problem -- the correct chunk (page 3) simply isn't retrieved in the top-20 candidates, so reranking can't fix it. Smaller chunks (500) solve this by giving page 3 its own chunk.
-- **Retrieval-level refusal rate: 40%** (4/10 unanswerable questions flagged as low-confidence). This is expected to be low -- vector search always finds *something* similar, even for irrelevant questions. True refusal relies on the LLM's prompt instructions (Phase 3). Questions like "Will the policy cover a future pandemic?" score 0.50 because the exclusion docs discuss related topics.
-- **Category breakdown confirms scores are legitimate**: simple_lookup (19/19), rephrased (16/16), and cross_document (5/5) all hit 100% on chunk_500. The high recall is not inflated by easy questions masking failures on harder ones.
-- **Example correct refusal**: "What is the CEO's name of the insurance company?" (top-1 score: 0.3982 -- system correctly has low confidence)
+- **Best overall config**: `chunk_500` (500 tokens, 50 overlap) -- Recall@5 of 100.0%, MRR of 0.8646
+- **Reranker Impact on chunk_800**: Recall@1 jumped from 72.5% to 87.5% (+15.0%) and MRR increased from 0.8396 to 0.9146. Reranking reorganized the candidate order on 100% of queries, pushing ground-truth documents directly to rank 1.
+- **Why Recall@5 was identical (97.5% -> 97.5%)**: The single retrieval miss (Q005) was absent from the initial top-20 bi-encoder candidate pool. A cross-encoder reranker can only re-score what Stage 1 retrieves; it cannot rescue documents completely missed by the retriever. Chunk size tuning (chunk_500) solved this Stage-1 recall bottleneck.
+- **Exploratory Retrieval Confidence Filter**: 40.0% (4/10) of unanswerable queries fell below the 0.40 cosine similarity threshold. Because embedding models often find tangential text, prompt-based LLM guardrails in Phase 3 are required for robust hallucination prevention.

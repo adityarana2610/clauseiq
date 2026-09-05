@@ -46,7 +46,9 @@ def compute_retrieval_metrics(results: list[dict], k: int = 5) -> dict:
 
     Returns:
         {
+            "recall_at_1": float,
             "recall_at_k": float,
+            "mrr": float,
             "hit_rate": float,
             "num_questions": int,
             "num_answerable": int,
@@ -54,16 +56,43 @@ def compute_retrieval_metrics(results: list[dict], k: int = 5) -> dict:
     """
     answerable = [r for r in results if r.get("is_answerable", True)]
     if not answerable:
-        return {"recall_at_k": 0.0, "hit_rate": 0.0, "num_questions": 0, "num_answerable": 0}
+        return {
+            "recall_at_1": 0.0,
+            f"recall_at_{k}": 0.0,
+            "mrr": 0.0,
+            "hit_rate": 0.0,
+            "num_questions": 0,
+            "num_answerable": 0,
+        }
 
-    hits = sum(
-        1 for r in answerable
-        if recall_at_k(r["retrieved_chunks"], r["expected_document"], r["expected_page"], k=k)
-    )
+    hits_k = 0
+    hits_1 = 0
+    reciprocal_ranks = []
+
+    for r in answerable:
+        exp_doc = r["expected_document"]
+        exp_page = r["expected_page"]
+        chunks = r["retrieved_chunks"][:k]
+
+        rank = None
+        for idx, c in enumerate(chunks):
+            if c.get("document") == exp_doc and c.get("page") == exp_page:
+                rank = idx + 1
+                break
+
+        if rank is not None:
+            hits_k += 1
+            reciprocal_ranks.append(1.0 / rank)
+            if rank == 1:
+                hits_1 += 1
+        else:
+            reciprocal_ranks.append(0.0)
 
     return {
-        f"recall_at_{k}": hits / len(answerable),
-        "hit_rate": hits / len(answerable),
+        "recall_at_1": hits_1 / len(answerable),
+        f"recall_at_{k}": hits_k / len(answerable),
+        "mrr": sum(reciprocal_ranks) / len(answerable),
+        "hit_rate": hits_k / len(answerable),
         "num_questions": len(results),
         "num_answerable": len(answerable),
     }
