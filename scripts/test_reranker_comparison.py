@@ -59,9 +59,9 @@ def run_comparison(pipeline, query: str):
 
 def main():
     print("=" * 65, flush=True)
-    print("ClauseIQ — Bi-Encoder vs Cross-Encoder Reranker Tester", flush=True)
+    print("ClauseIQ — Interactive Reranker Comparison Tester", flush=True)
     print("=" * 65, flush=True)
-    print("Loading models and vector index...", end=" ", flush=True)
+    print("Initializing embedding model, reranker, and vector database...", flush=True)
 
     pipeline = RAGPipeline(
         chunk_size=800,
@@ -76,48 +76,26 @@ def main():
         pipeline.ingest("raw_pdfs_v2", chunk_size=800, chunk_overlap=100)
         pipeline.save("data/faiss_index")
 
-    print("[Ready]\n", flush=True)
-
-    # If question passed via command-line arguments:
-    if len(sys.argv) > 1:
-        query = " ".join(sys.argv[1:]).strip("\"'")
-        run_comparison(pipeline, query)
-        return
-
-    # Otherwise run interactive mode
-    sample_questions = [
-        "What is the dwelling coverage limit for the premium homeowners policy?",
-        "What is the glass repair co-payment under the basic automobile policy?",
-        "What is the personal liability coverage limit under the standard homeowners policy?",
-    ]
-
-    print("Options:", flush=True)
-    for i, sq in enumerate(sample_questions, 1):
-        print(f"  [{i}] {sq}", flush=True)
-    print("  [or type any custom question, or 'all' to run all 3, or 'quit' to exit]\n", flush=True)
+    print("\n[OK] Ready! Type ANY insurance question below.", flush=True)
+    print("Type 'exit' or 'quit' to stop.\n", flush=True)
 
     while True:
         try:
-            query = input("Enter Question (1-3, custom, or 'all') > ").strip()
+            print("Ask a question:")
+            query = input("> ").strip()
         except (KeyboardInterrupt, EOFError):
+            print("\nExiting.")
             break
 
-        if not query or query.lower() in ("quit", "exit"):
+        if not query:
+            continue
+
+        if query.lower() in ("quit", "exit", "q"):
+            print("Exiting.")
             break
 
-        if query == "1":
-            run_comparison(pipeline, sample_questions[0])
-        elif query == "2":
-            run_comparison(pipeline, sample_questions[1])
-        elif query == "3":
-            run_comparison(pipeline, sample_questions[2])
-        elif query.lower() == "all":
-            for sq in sample_questions:
-                run_comparison(pipeline, sq)
-        else:
-            run_comparison(pipeline, query)
-
-        print("\n" + "-" * 65, flush=True)
+        run_comparison(pipeline, query)
+        print("\n" + "=" * 65 + "\n", flush=True)
 
 
 if __name__ == "__main__":
