@@ -7,7 +7,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "deductibles",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "simple_lookup"
   },
   {
     "id": "Q002",
@@ -17,7 +18,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "coverage_limits",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "simple_lookup"
   },
   {
     "id": "Q003",
@@ -27,7 +29,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "claims",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "rephrased"
   },
   {
     "id": "Q004",
@@ -37,7 +40,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "coverage_limits",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "simple_lookup"
   },
   {
     "id": "Q005",
@@ -47,7 +51,8 @@
     "expected_page": 3,
     "doc_type": "policy",
     "category": "general_conditions",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "rephrased"
   },
   {
     "id": "Q006",
@@ -57,7 +62,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "coverage_limits",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "simple_lookup"
   },
   {
     "id": "Q007",
@@ -67,7 +73,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "deductibles",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "simple_lookup"
   },
   {
     "id": "Q008",
@@ -77,7 +84,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "coverage_limits",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "rephrased"
   },
   {
     "id": "Q009",
@@ -87,7 +95,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "claims",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "cross_document"
   },
   {
     "id": "Q010",
@@ -97,7 +106,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "coverage_limits",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "simple_lookup"
   },
   {
     "id": "Q011",
@@ -107,7 +117,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "deductibles",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "rephrased"
   },
   {
     "id": "Q012",
@@ -117,7 +128,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "coverage_limits",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "rephrased"
   },
   {
     "id": "Q013",
@@ -127,7 +139,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "coverage_limits",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "simple_lookup"
   },
   {
     "id": "Q014",
@@ -137,7 +150,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "deductibles",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "simple_lookup"
   },
   {
     "id": "Q015",
@@ -147,7 +161,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "coverage_limits",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "rephrased"
   },
   {
     "id": "Q016",
@@ -157,7 +172,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "coverage_limits",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "simple_lookup"
   },
   {
     "id": "Q017",
@@ -167,7 +183,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "claims",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "cross_document"
   },
   {
     "id": "Q018",
@@ -177,7 +194,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "deductibles",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "simple_lookup"
   },
   {
     "id": "Q019",
@@ -187,7 +205,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "deductibles",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "simple_lookup"
   },
   {
     "id": "Q020",
@@ -197,7 +216,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "waiting_period",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "rephrased"
   },
   {
     "id": "Q021",
@@ -207,7 +227,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "deductibles",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "simple_lookup"
   },
   {
     "id": "Q022",
@@ -217,7 +238,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "coverage_limits",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "simple_lookup"
   },
   {
     "id": "Q023",
@@ -227,7 +249,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "deductibles",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "simple_lookup"
   },
   {
     "id": "Q024",
@@ -237,7 +260,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "waiting_period",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "rephrased"
   },
   {
     "id": "Q025",
@@ -247,7 +271,8 @@
     "expected_page": 1,
     "doc_type": "policy",
     "category": "claims",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "rephrased"
   },
   {
     "id": "Q026",
@@ -257,7 +282,8 @@
     "expected_page": 1,
     "doc_type": "endorsement",
     "category": "coverage_limits",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "simple_lookup"
   },
   {
     "id": "Q027",
@@ -267,7 +293,8 @@
     "expected_page": 1,
     "doc_type": "endorsement",
     "category": "deductibles",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "simple_lookup"
   },
   {
     "id": "Q028",
@@ -277,7 +304,8 @@
     "expected_page": 1,
     "doc_type": "endorsement",
     "category": "waiting_period",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "rephrased"
   },
   {
     "id": "Q029",
@@ -287,7 +315,8 @@
     "expected_page": 1,
     "doc_type": "endorsement",
     "category": "coverage_limits",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "simple_lookup"
   },
   {
     "id": "Q030",
@@ -297,7 +326,8 @@
     "expected_page": 1,
     "doc_type": "endorsement",
     "category": "coverage_limits",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "simple_lookup"
   },
   {
     "id": "Q031",
@@ -307,7 +337,8 @@
     "expected_page": 1,
     "doc_type": "endorsement",
     "category": "exclusions",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "rephrased"
   },
   {
     "id": "Q032",
@@ -317,7 +348,8 @@
     "expected_page": 1,
     "doc_type": "claim",
     "category": "claims",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "cross_document"
   },
   {
     "id": "Q033",
@@ -327,7 +359,8 @@
     "expected_page": 1,
     "doc_type": "claim",
     "category": "claims",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "cross_document"
   },
   {
     "id": "Q034",
@@ -337,7 +370,8 @@
     "expected_page": 1,
     "doc_type": "claim",
     "category": "claims",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "rephrased"
   },
   {
     "id": "Q035",
@@ -347,7 +381,8 @@
     "expected_page": 1,
     "doc_type": "claim",
     "category": "claims",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "rephrased"
   },
   {
     "id": "Q036",
@@ -357,7 +392,8 @@
     "expected_page": 1,
     "doc_type": "claim",
     "category": "claims",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "rephrased"
   },
   {
     "id": "Q037",
@@ -367,7 +403,8 @@
     "expected_page": 1,
     "doc_type": "claim",
     "category": "claims",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "cross_document"
   },
   {
     "id": "Q038",
@@ -377,7 +414,8 @@
     "expected_page": 1,
     "doc_type": "exclusion",
     "category": "exclusions",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "rephrased"
   },
   {
     "id": "Q039",
@@ -387,7 +425,8 @@
     "expected_page": 1,
     "doc_type": "exclusion",
     "category": "exclusions",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "simple_lookup"
   },
   {
     "id": "Q040",
@@ -397,7 +436,8 @@
     "expected_page": 1,
     "doc_type": "exclusion",
     "category": "exclusions",
-    "is_answerable": true
+    "is_answerable": true,
+    "question_type": "rephrased"
   },
   {
     "id": "UNANSWERABLE_001",
@@ -408,7 +448,8 @@
     "doc_type": null,
     "category": "unanswerable",
     "is_answerable": false,
-    "reason": "CEO names are not mentioned in insurance policy documents"
+    "reason": "CEO names are not mentioned in insurance policy documents",
+    "question_type": "unanswerable"
   },
   {
     "id": "UNANSWERABLE_002",
@@ -419,7 +460,8 @@
     "doc_type": null,
     "category": "unanswerable",
     "is_answerable": false,
-    "reason": "Financial market data is not in the documents"
+    "reason": "Financial market data is not in the documents",
+    "question_type": "unanswerable"
   },
   {
     "id": "UNANSWERABLE_003",
@@ -430,7 +472,8 @@
     "doc_type": null,
     "category": "unanswerable",
     "is_answerable": false,
-    "reason": "Speculative future coverage questions cannot be answered from policy text"
+    "reason": "Speculative future coverage questions cannot be answered from policy text",
+    "question_type": "unanswerable"
   },
   {
     "id": "UNANSWERABLE_004",
@@ -441,7 +484,8 @@
     "doc_type": null,
     "category": "unanswerable",
     "is_answerable": false,
-    "reason": "Company financials are not part of policy documents"
+    "reason": "Company financials are not part of policy documents",
+    "question_type": "unanswerable"
   },
   {
     "id": "UNANSWERABLE_005",
@@ -452,7 +496,8 @@
     "doc_type": null,
     "category": "unanswerable",
     "is_answerable": false,
-    "reason": "Contact information such as email addresses is not in the documents"
+    "reason": "Contact information such as email addresses is not in the documents",
+    "question_type": "unanswerable"
   },
   {
     "id": "UNANSWERABLE_006",
@@ -463,7 +508,8 @@
     "doc_type": null,
     "category": "unanswerable",
     "is_answerable": false,
-    "reason": "Interest rates on late payments are not specified in the policy documents"
+    "reason": "Interest rates on late payments are not specified in the policy documents",
+    "question_type": "unanswerable"
   },
   {
     "id": "UNANSWERABLE_007",
@@ -474,7 +520,8 @@
     "doc_type": null,
     "category": "unanswerable",
     "is_answerable": false,
-    "reason": "Policy transfer rules are not addressed in the documents"
+    "reason": "Policy transfer rules are not addressed in the documents",
+    "question_type": "unanswerable"
   },
   {
     "id": "UNANSWERABLE_008",
@@ -485,7 +532,8 @@
     "doc_type": null,
     "category": "unanswerable",
     "is_answerable": false,
-    "reason": "Claims statistics are not part of the policy or claims documents"
+    "reason": "Claims statistics are not part of the policy or claims documents",
+    "question_type": "unanswerable"
   },
   {
     "id": "UNANSWERABLE_009",
@@ -496,7 +544,8 @@
     "doc_type": null,
     "category": "unanswerable",
     "is_answerable": false,
-    "reason": "Personnel information is not in the policy documents"
+    "reason": "Personnel information is not in the policy documents",
+    "question_type": "unanswerable"
   },
   {
     "id": "UNANSWERABLE_010",
@@ -507,6 +556,7 @@
     "doc_type": null,
     "category": "unanswerable",
     "is_answerable": false,
-    "reason": "International coverage territory is not defined in the documents"
+    "reason": "International coverage territory is not defined in the documents",
+    "question_type": "unanswerable"
   }
 ]
