@@ -8,12 +8,17 @@ This is the core class you'll reference in interviews.
 
 from pathlib import Path
 
+from dotenv import load_dotenv
+
 from app.ingestion.pdf_parser import extract_all_pdfs
 from app.ingestion.cleaner import clean_pages
 from app.ingestion.chunker import chunk_pages
 from app.retrieval.embedder import Embedder
 from app.retrieval.vector_store import VectorStore
 from app.retrieval.reranker import Reranker
+
+# Load .env so GOOGLE_API_KEY is available
+load_dotenv()
 
 
 class RAGPipeline:
@@ -33,13 +38,13 @@ class RAGPipeline:
     def __init__(
         self,
         embedding_model: str = "all-MiniLM-L6-v2",
-        mistral_model: str = "mistral-small-latest",
+        llm_model: str = "gemini-flash-latest",
         chunk_size: int = 800,
         chunk_overlap: int = 100,
         retrieval_top_k: int = 20,
         reranker_top_k: int = 5,
         use_reranker: bool = True,
-        mistral_api_key: str | None = None,
+        api_key: str | None = None,
         skip_llm: bool = False,
     ):
         self.chunk_size = chunk_size
@@ -54,12 +59,12 @@ class RAGPipeline:
 
         # Lazy LLM init — only load when needed (skip for ingestion/retrieval-only eval)
         self.llm = None
-        self._mistral_model = mistral_model
-        self._mistral_api_key = mistral_api_key
+        self._llm_model = llm_model
+        self._api_key = api_key
         if not skip_llm:
             try:
-                from app.generation.llm import MistralLLM
-                self.llm = MistralLLM(api_key=mistral_api_key, model=mistral_model)
+                from app.generation.llm import GeminiLLM
+                self.llm = GeminiLLM(api_key=api_key, model=llm_model)
             except Exception as e:
                 print(f"  LLM not available (ok for retrieval-only): {e}")
 
@@ -148,6 +153,8 @@ class RAGPipeline:
         question: str,
         filter_doc_type: str | None = None,
         filter_document: str | None = None,
+        max_tokens: int = 2048,
+        temperature: float = 0.1,
     ) -> dict:
         """
         Full RAG answer: retrieve → generate.
@@ -171,11 +178,16 @@ class RAGPipeline:
                 "question": question,
                 "answer": "I cannot find any relevant information in the provided documents.",
                 "sources": [],
-                "model": self.llm.model,
+                "model": self.llm.model if self.llm else "unknown",
                 "num_chunks_used": 0,
             }
 
-        result = self.llm.generate(question=question, chunks=chunks)
+        result = self.llm.generate(
+            question=question,
+            chunks=chunks,
+            temperature=temperature,
+            max_tokens=max_tokens,
+        )
 
         sources = [
             {

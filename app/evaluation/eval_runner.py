@@ -1,6 +1,6 @@
 """
 ClauseIQ — Evaluation Runner
-Runs the 50-question eval set against the pipeline and reports metrics.
+Runs the eval set against the pipeline and reports metrics.
 
 Usage:
     python -m app.evaluation.eval_runner \

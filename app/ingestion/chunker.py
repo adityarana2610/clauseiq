@@ -11,7 +11,7 @@ Design notes:
 
 import tiktoken
 
-# Default tokenizer — close enough approximation for Mistral
+# Default tokenizer — general-purpose token counter for chunk sizing
 _TOKENIZER = tiktoken.get_encoding("cl100k_base")
 
 

@@ -16,8 +16,8 @@ numpy>=2.1.0
 # Reranker
 # sentence-transformers already covers cross-encoder
 
-# LLM - Mistral
-mistralai>=1.1.0
+# LLM - Google Gemini
+google-generativeai>=0.8.0
 
 # UI
 streamlit>=1.38.0

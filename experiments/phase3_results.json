@@ -1,0 +1,442 @@
+{
+  "summary": {
+    "mode": "unanswerable",
+    "total_evaluated": 10,
+    "avg_latency": 7.8,
+    "unanswerable_total": 10,
+    "correct_refusals": 9,
+    "refusal_rate_pct": 90.0
+  },
+  "results": [
+    {
+      "id": "UNANSWERABLE_001",
+      "question": "What is the CEO's name of the insurance company?",
+      "is_answerable": false,
+      "expected_document": null,
+      "expected_page": null,
+      "answer": "I cannot find this information in the provided documents.",
+      "is_refusal": true,
+      "has_doc_citation": false,
+      "sources": [
+        {
+          "document": "policy_motor_comprehensive_002",
+          "page": 3,
+          "doc_type": "policy",
+          "score": -7.378943920135498
+        },
+        {
+          "document": "exclusion_general_001",
+          "page": 3,
+          "doc_type": "exclusion",
+          "score": -7.50408935546875
+        },
+        {
+          "document": "exclusion_high_risk_002",
+          "page": 3,
+          "doc_type": "exclusion",
+          "score": -7.568897724151611
+        },
+        {
+          "document": "policy_home_premium_002",
+          "page": 3,
+          "doc_type": "policy",
+          "score": -7.659714698791504
+        },
+        {
+          "document": "policy_health_family_002",
+          "page": 3,
+          "doc_type": "policy",
+          "score": -7.697779655456543
+        }
+      ],
+      "latency_seconds": 3.72
+    },
+    {
+      "id": "UNANSWERABLE_002",
+      "question": "What is the current stock price of the insurer?",
+      "is_answerable": false,
+      "expected_document": null,
+      "expected_page": null,
+      "answer": "I cannot find this information in the provided documents.",
+      "is_refusal": true,
+      "has_doc_citation": false,
+      "sources": [
+        {
+          "document": "policy_health_family_002",
+          "page": 1,
+          "doc_type": "policy",
+          "score": -7.979098320007324
+        },
+        {
+          "document": "policy_health_individual_001",
+          "page": 1,
+          "doc_type": "policy",
+          "score": -8.29981517791748
+        },
+        {
+          "document": "policy_home_premium_002",
+          "page": 1,
+          "doc_type": "policy",
+          "score": -8.843073844909668
+        },
+        {
+          "document": "policy_motor_comprehensive_002",
+          "page": 1,
+          "doc_type": "policy",
+          "score": -8.93510627746582
+        },
+        {
+          "document": "policy_home_standard_001",
+          "page": 1,
+          "doc_type": "policy",
+          "score": -9.056473731994629
+        }
+      ],
+      "latency_seconds": 4.23
+    },
+    {
+      "id": "UNANSWERABLE_003",
+      "question": "Will the policy cover damage from a future pandemic?",
+      "is_answerable": false,
+      "expected_document": null,
+      "expected_page": null,
+      "answer": "Based on the provided documents, the policy will not cover losses resulting from a pandemic:\n\n* Pandemics are specifically excluded from coverage. This includes business interruption, medical costs, or property contamination resulting from a viral or bacterial outbreak classified as an epidemic or pandemic by the World Health Organization (Source: `exclusion_high_risk_002`, Page 1).",
+      "is_refusal": false,
+      "has_doc_citation": false,
+      "sources": [
+        {
+          "document": "exclusion_high_risk_002",
+          "page": 1,
+          "doc_type": "exclusion",
+          "score": -0.3743115961551666
+        },
+        {
+          "document": "exclusion_general_001",
+          "page": 1,
+          "doc_type": "exclusion",
+          "score": -3.1321396827697754
+        },
+        {
+          "document": "policy_home_premium_002",
+          "page": 2,
+          "doc_type": "policy",
+          "score": -4.37154483795166
+        },
+        {
+          "document": "policy_home_standard_001",
+          "page": 2,
+          "doc_type": "policy",
+          "score": -4.3960490226745605
+        },
+        {
+          "document": "claim_process_guidelines_001",
+          "page": 2,
+          "doc_type": "claim",
+          "score": -4.539868354797363
+        }
+      ],
+      "latency_seconds": 9.93
+    },
+    {
+      "id": "UNANSWERABLE_004",
+      "question": "What is the annual revenue of the insurance company?",
+      "is_answerable": false,
+      "expected_document": null,
+      "expected_page": null,
+      "answer": "I cannot find this information in the provided documents.",
+      "is_refusal": true,
+      "has_doc_citation": false,
+      "sources": [
+        {
+          "document": "policy_health_individual_001",
+          "page": 1,
+          "doc_type": "policy",
+          "score": -4.688713550567627
+        },
+        {
+          "document": "policy_health_family_002",
+          "page": 1,
+          "doc_type": "policy",
+          "score": -5.099931240081787
+        },
+        {
+          "document": "policy_home_premium_002",
+          "page": 1,
+          "doc_type": "policy",
+          "score": -5.855112552642822
+        },
+        {
+          "document": "policy_home_standard_001",
+          "page": 1,
+          "doc_type": "policy",
+          "score": -5.895805835723877
+        },
+        {
+          "document": "endorsement_natural_disaster_002",
+          "page": 1,
+          "doc_type": "endorsement",
+          "score": -7.408303260803223
+        }
+      ],
+      "latency_seconds": 7.24
+    },
+    {
+      "id": "UNANSWERABLE_005",
+      "question": "What email address should claims be sent to?",
+      "is_answerable": false,
+      "expected_document": null,
+      "expected_page": null,
+      "answer": "I cannot find this information in the provided documents.",
+      "is_refusal": true,
+      "has_doc_citation": false,
+      "sources": [
+        {
+          "document": "policy_motor_basic_001",
+          "page": 5,
+          "doc_type": "policy",
+          "score": -6.083974838256836
+        },
+        {
+          "document": "policy_motor_basic_001",
+          "page": 3,
+          "doc_type": "policy",
+          "score": -6.097883701324463
+        },
+        {
+          "document": "claim_process_guidelines_001",
+          "page": 1,
+          "doc_type": "claim",
+          "score": -6.242152214050293
+        },
+        {
+          "document": "policy_health_individual_001",
+          "page": 3,
+          "doc_type": "policy",
+          "score": -6.448983669281006
+        },
+        {
+          "document": "endorsement_flood_addon_001",
+          "page": 3,
+          "doc_type": "endorsement",
+          "score": -6.448983669281006
+        }
+      ],
+      "latency_seconds": 7.29
+    },
+    {
+      "id": "UNANSWERABLE_006",
+      "question": "What is the interest rate charged on late premium payments?",
+      "is_answerable": false,
+      "expected_document": null,
+      "expected_page": null,
+      "answer": "I cannot find this information in the provided documents.",
+      "is_refusal": true,
+      "has_doc_citation": false,
+      "sources": [
+        {
+          "document": "policy_home_premium_002",
+          "page": 1,
+          "doc_type": "policy",
+          "score": -6.737839698791504
+        },
+        {
+          "document": "policy_home_standard_001",
+          "page": 1,
+          "doc_type": "policy",
+          "score": -8.780089378356934
+        },
+        {
+          "document": "policy_health_family_002",
+          "page": 1,
+          "doc_type": "policy",
+          "score": -8.91775894165039
+        },
+        {
+          "document": "exclusion_general_001",
+          "page": 2,
+          "doc_type": "exclusion",
+          "score": -9.203974723815918
+        },
+        {
+          "document": "policy_motor_comprehensive_002",
+          "page": 1,
+          "doc_type": "policy",
+          "score": -9.351216316223145
+        }
+      ],
+      "latency_seconds": 7.77
+    },
+    {
+      "id": "UNANSWERABLE_007",
+      "question": "Can the insurance policy be transferred to another person?",
+      "is_answerable": false,
+      "expected_document": null,
+      "expected_page": null,
+      "answer": "I cannot find this information in the provided documents.",
+      "is_refusal": true,
+      "has_doc_citation": false,
+      "sources": [
+        {
+          "document": "policy_motor_comprehensive_002",
+          "page": 3,
+          "doc_type": "policy",
+          "score": -2.614253282546997
+        },
+        {
+          "document": "policy_health_family_002",
+          "page": 3,
+          "doc_type": "policy",
+          "score": -3.100883960723877
+        },
+        {
+          "document": "policy_home_premium_002",
+          "page": 3,
+          "doc_type": "policy",
+          "score": -3.848099708557129
+        },
+        {
+          "document": "claim_process_timeline_002",
+          "page": 3,
+          "doc_type": "claim",
+          "score": -3.864137649536133
+        },
+        {
+          "document": "policy_home_standard_001",
+          "page": 3,
+          "doc_type": "policy",
+          "score": -3.871265411376953
+        }
+      ],
+      "latency_seconds": 6.47
+    },
+    {
+      "id": "UNANSWERABLE_008",
+      "question": "What is the company's historical claims approval rate?",
+      "is_answerable": false,
+      "expected_document": null,
+      "expected_page": null,
+      "answer": "I cannot find this information in the provided documents.",
+      "is_refusal": true,
+      "has_doc_citation": false,
+      "sources": [
+        {
+          "document": "claim_process_timeline_002",
+          "page": 1,
+          "doc_type": "claim",
+          "score": -8.077775955200195
+        },
+        {
+          "document": "claim_process_guidelines_001",
+          "page": 1,
+          "doc_type": "claim",
+          "score": -8.323381423950195
+        },
+        {
+          "document": "policy_home_standard_001",
+          "page": 1,
+          "doc_type": "policy",
+          "score": -8.5130615234375
+        },
+        {
+          "document": "policy_home_premium_002",
+          "page": 1,
+          "doc_type": "policy",
+          "score": -8.555492401123047
+        },
+        {
+          "document": "endorsement_natural_disaster_002",
+          "page": 1,
+          "doc_type": "endorsement",
+          "score": -8.66920280456543
+        }
+      ],
+      "latency_seconds": 10.28
+    },
+    {
+      "id": "UNANSWERABLE_009",
+      "question": "What are the names and qualifications of the insurance adjusters?",
+      "is_answerable": false,
+      "expected_document": null,
+      "expected_page": null,
+      "answer": "I cannot find this information in the provided documents.",
+      "is_refusal": true,
+      "has_doc_citation": false,
+      "sources": [
+        {
+          "document": "policy_health_individual_001",
+          "page": 5,
+          "doc_type": "policy",
+          "score": -5.655444145202637
+        },
+        {
+          "document": "policy_motor_comprehensive_002",
+          "page": 5,
+          "doc_type": "policy",
+          "score": -5.851940155029297
+        },
+        {
+          "document": "policy_home_standard_001",
+          "page": 5,
+          "doc_type": "policy",
+          "score": -6.135044097900391
+        },
+        {
+          "document": "policy_health_family_002",
+          "page": 5,
+          "doc_type": "policy",
+          "score": -6.137499809265137
+        },
+        {
+          "document": "policy_motor_basic_001",
+          "page": 5,
+          "doc_type": "policy",
+          "score": -6.384314060211182
+        }
+      ],
+      "latency_seconds": 5.21
+    },
+    {
+      "id": "UNANSWERABLE_010",
+      "question": "Does the policy cover property damage that occurs in a foreign country?",
+      "is_answerable": false,
+      "expected_document": null,
+      "expected_page": null,
+      "answer": "I cannot find this information in the provided documents.",
+      "is_refusal": true,
+      "has_doc_citation": false,
+      "sources": [
+        {
+          "document": "policy_home_standard_001",
+          "page": 2,
+          "doc_type": "policy",
+          "score": -2.2492175102233887
+        },
+        {
+          "document": "claim_process_guidelines_001",
+          "page": 2,
+          "doc_type": "claim",
+          "score": -2.324166774749756
+        },
+        {
+          "document": "claim_process_timeline_002",
+          "page": 2,
+          "doc_type": "claim",
+          "score": -2.326633930206299
+        },
+        {
+          "document": "policy_home_premium_002",
+          "page": 2,
+          "doc_type": "policy",
+          "score": -2.349569320678711
+        },
+        {
+          "document": "exclusion_general_001",
+          "page": 1,
+          "doc_type": "exclusion",
+          "score": -2.4681458473205566
+        }
+      ],
+      "latency_seconds": 15.82
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+[
+  {
+    "label": "chunk_500",
+    "chunk_size": 500,
+    "overlap": 50,
+    "reranker": false,
+    "recall_at_1": 0.7560975609756098,
+    "recall_at_5": 1.0,
+    "mrr": 0.8678861788617886,
+    "hit_rate": 1.0,
+    "num_questions": 51,
+    "num_answerable": 41,
+    "elapsed": 0.4489457607269287,
+    "num_chunks": 67,
+    "by_type": {
+      "simple_lookup": {
+        "count": 20,
+        "hits": 20
+      },
+      "rephrased": {
+        "count": 16,
+        "hits": 16
+      },
+      "cross_document": {
+        "count": 5,
+        "hits": 5
+      }
+    }
+  },
+  {
+    "label": "chunk_800",
+    "chunk_size": 800,
+    "overlap": 100,
+    "reranker": false,
+    "recall_at_1": 0.7317073170731707,
+    "recall_at_5": 0.975609756097561,
+    "mrr": 0.8434959349593496,
+    "hit_rate": 0.975609756097561,
+    "num_questions": 51,
+    "num_answerable": 41,
+    "elapsed": 0.41726112365722656,
+    "num_chunks": 55,
+    "by_type": {
+      "simple_lookup": {
+        "count": 20,
+        "hits": 20
+      },
+      "rephrased": {
+        "count": 16,
+        "hits": 16
+      },
+      "cross_document": {
+        "count": 5,
+        "hits": 5
+      }
+    }
+  },
+  {
+    "label": "chunk_1200",
+    "chunk_size": 1200,
+    "overlap": 150,
+    "reranker": false,
+    "recall_at_1": 0.7317073170731707,
+    "recall_at_5": 0.975609756097561,
+    "mrr": 0.8434959349593496,
+    "hit_rate": 0.975609756097561,
+    "num_questions": 51,
+    "num_answerable": 41,
+    "elapsed": 0.41822242736816406,
+    "num_chunks": 55,
+    "by_type": {
+      "simple_lookup": {
+        "count": 20,
+        "hits": 20
+      },
+      "rephrased": {
+        "count": 16,
+        "hits": 16
+      },
+      "cross_document": {
+        "count": 5,
+        "hits": 5
+      }
+    }
+  },
+  {
+    "label": "chunk_800_reranked",
+    "chunk_size": 800,
+    "overlap": 100,
+    "reranker": true,
+    "recall_at_1": 0.8780487804878049,
+    "recall_at_5": 0.975609756097561,
+    "mrr": 0.9166666666666667,
+    "hit_rate": 0.975609756097561,
+    "num_questions": 51,
+    "num_answerable": 41,
+    "elapsed": 40.76737403869629,
+    "num_chunks": 55,
+    "by_type": {
+      "simple_lookup": {
+        "count": 20,
+        "hits": 20
+      },
+      "rephrased": {
+        "count": 16,
+        "hits": 16
+      },
+      "cross_document": {
+        "count": 5,
+        "hits": 5
+      }
+    }
+  },
+  {
+    "label": "chunk_1200_reranked",
+    "chunk_size": 1200,
+    "overlap": 150,
+    "reranker": true,
+    "recall_at_1": 0.8780487804878049,
+    "recall_at_5": 0.975609756097561,
+    "mrr": 0.9166666666666667,
+    "hit_rate": 0.975609756097561,
+    "num_questions": 51,
+    "num_answerable": 41,
+    "elapsed": 41.48081707954407,
+    "num_chunks": 55,
+    "by_type": {
+      "simple_lookup": {
+        "count": 20,
+        "hits": 20
+      },
+      "rephrased": {
+        "count": 16,
+        "hits": 16
+      },
+      "cross_document": {
+        "count": 5,
+        "hits": 5
+      }
+    }
+  }
+]

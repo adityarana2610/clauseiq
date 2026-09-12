@@ -1,5 +1,5 @@
 """
-ClauseIQ — Prompt Templates for Mistral
+ClauseIQ — Prompt Templates
 Keeps all prompts in one place — easy to iterate during tuning.
 
 Interview note: prompt engineering for hallucination control is a first-class
@@ -40,13 +40,16 @@ def build_context_block(chunks: list[dict]) -> str:
     """
     lines = []
     for i, chunk in enumerate(chunks, 1):
-        header = f"[Source {i}: {chunk['document']} — Page {chunk['page']}]"
-        lines.append(f"{header}\n{chunk['text'].strip()}")
+        doc = chunk.get("document", chunk.get("source_doc", "Policy Document"))
+        page = chunk.get("page", "?")
+        header = f"[Source {i}: {doc} — Page {page}]"
+        lines.append(f"{header}\n{chunk.get('text', '').strip()}")
     return "\n\n".join(lines)
 
 
+
 def build_answer_prompt(question: str, chunks: list[dict]) -> str:
-    """Build the full prompt to send to Mistral."""
+    """Build the full prompt to send to LLM."""
     context_block = build_context_block(chunks)
     return ANSWER_PROMPT_TEMPLATE.format(
         system=SYSTEM_PROMPT,

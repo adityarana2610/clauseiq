@@ -466,14 +466,14 @@
   {
     "id": "UNANSWERABLE_003",
     "question": "Will the policy cover damage from a future pandemic?",
-    "expected_answer": null,
-    "expected_document": null,
-    "expected_page": null,
-    "doc_type": null,
-    "category": "unanswerable",
-    "is_answerable": false,
-    "reason": "Speculative future coverage questions cannot be answered from policy text",
-    "question_type": "unanswerable"
+    "expected_answer": "Pandemics are specifically excluded from coverage, including business interruption, medical costs, or property contamination from viral/bacterial outbreaks classified as epidemics or pandemics by the WHO.",
+    "expected_document": "exclusion_high_risk_002",
+    "expected_page": 1,
+    "doc_type": "exclusion",
+    "category": "exclusions",
+    "is_answerable": true,
+    "reason": "Reclassified: exclusion_high_risk_002 explicitly enumerates pandemic exclusions. Originally mislabeled as unanswerable.",
+    "question_type": "simple_lookup"
   },
   {
     "id": "UNANSWERABLE_004",
@@ -557,6 +557,18 @@
     "category": "unanswerable",
     "is_answerable": false,
     "reason": "International coverage territory is not defined in the documents",
+    "question_type": "unanswerable"
+  },
+  {
+    "id": "UNANSWERABLE_011",
+    "question": "What is the minimum credit score required to qualify for a policy?",
+    "expected_answer": null,
+    "expected_document": null,
+    "expected_page": null,
+    "doc_type": null,
+    "category": "unanswerable",
+    "is_answerable": false,
+    "reason": "Underwriting eligibility criteria such as credit scores are not specified in the policy documents",
     "question_type": "unanswerable"
   }
 ]

@@ -30,7 +30,7 @@ def main():
             chunk_size=500, 
             chunk_overlap=50, 
             use_reranker=True,
-            skip_llm=True  # Skip Mistral since we're only testing retrieval
+            skip_llm=True  # Skip LLM since we're only testing retrieval
         )
         print("[OK] Database loaded successfully.")
     except Exception as e:

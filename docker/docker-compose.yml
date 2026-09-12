@@ -8,8 +8,8 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - MISTRAL_API_KEY=${MISTRAL_API_KEY}
-      - MISTRAL_MODEL=${MISTRAL_MODEL:-mistral-small-latest}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - GEMINI_MODEL=${GEMINI_MODEL:-gemini-flash-latest}
       - FAISS_INDEX_PATH=/app/data/faiss_index
     volumes:
       - clauseiq_data:/app/data
