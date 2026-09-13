@@ -13,6 +13,7 @@ Model: cross-encoder/ms-marco-MiniLM-L-6-v2
   - ~66MB, runs on CPU in ~50ms per batch
 """
 
+# pyrefly: ignore [missing-import]
 from sentence_transformers import CrossEncoder
 
 _DEFAULT_RERANKER_MODEL = "cross-encoder/ms-marco-MiniLM-L-6-v2"

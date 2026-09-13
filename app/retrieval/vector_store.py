@@ -18,6 +18,7 @@ import json
 import pickle
 from pathlib import Path
 
+# pyrefly: ignore [missing-import]
 import faiss
 import numpy as np
 

@@ -68,9 +68,10 @@ class GeminiLLM:
                 config=config,
             )
         except Exception as e:
-            if "503" in str(e) or "UNAVAILABLE" in str(e):
+            err_str = str(e)
+            if any(keyword in err_str for keyword in ["503", "UNAVAILABLE", "RESOURCE_EXHAUSTED", "429"]):
                 fallback_model = "gemini-flash-lite-latest" if used_model != "gemini-flash-lite-latest" else "gemini-flash-latest"
-                print(f"  [Notice: 503 on {used_model}, falling back to {fallback_model}]")
+                print(f"  [Notice: {used_model} unavailable/rate-limited, falling back to {fallback_model}]")
                 used_model = fallback_model
                 response = self._client.models.generate_content(
                     model=used_model,
