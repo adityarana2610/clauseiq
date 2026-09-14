@@ -4,7 +4,7 @@ Splits cleaned page text into overlapping token-based chunks.
 Preserves source metadata (document, page) on each chunk for citations.
 
 Design notes:
-  - Token counting via tiktoken (cl100k_base — same tokenizer as GPT-4 / Mistral approx)
+  - Token counting via tiktoken (cl100k_base — general-purpose BPE tokenizer)
   - Chunks respect sentence boundaries where possible (split on ". ")
   - chunk_size and chunk_overlap are configurable for experiments
 """

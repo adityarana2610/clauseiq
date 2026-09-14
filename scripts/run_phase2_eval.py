@@ -201,7 +201,7 @@ def write_final_results(
     lines.append("> [!WARNING]\n")
     lines.append("> **Not LLM Refusal**: This metric tests a retrieval cosine-similarity threshold (< 0.40 score = low confidence).\n")
     lines.append("> It is **NOT** the prompt-based LLM refusal rate. The true hallucination guardrail test (\"I cannot find this information...\")\n")
-    lines.append("> will be evaluated in Phase 3 by running unanswerable questions through `pipeline.ask()` with Mistral.\n\n")
+    lines.append("> will be evaluated in Phase 3 by running unanswerable questions through `pipeline.ask()` with Gemini.\n\n")
 
     lines.append("| Config | Unanswerable Qs | Sub-Threshold Chunks | Proxy Filter Rate |\n")
     lines.append("|---|---|---|---|\n")
