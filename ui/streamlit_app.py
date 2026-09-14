@@ -59,7 +59,7 @@ with st.sidebar:
 
     # Health check
     try:
-        health = requests.get(f"{API_URL}/health", timeout=3).json()
+        health = requests.get(f"{API_URL}/health", timeout=15).json()
         st.success("✅ Backend connected")
         col1, col2 = st.columns(2)
         with col1:

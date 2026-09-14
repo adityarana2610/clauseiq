@@ -18,6 +18,20 @@ ClauseIQ retrieves the most relevant policy clauses for a given question, rerank
 
 ---
 
+## Demo
+
+### 1. Multi-Document Policy Synthesis & Citations
+Synthesizing dwelling coverage limits across distinct policy tiers simultaneously, providing exact document and page citations for every figure:
+
+![ClauseIQ Multi-Document Synthesis](docs/assets/demo_synthesis.png)
+
+### 2. Hallucination Refusal Guardrail
+When asked out-of-scope or unanswerable queries (e.g., executive names not contained in policy filings), the system reliably refuses to guess, backed by negative reranker scores:
+
+![ClauseIQ Refusal Guardrail](docs/assets/demo_refusal.png)
+
+---
+
 ## Architecture
 
 ```
@@ -207,6 +221,7 @@ clauseiq/
 │   └── pipeline.py      # End-to-end orchestrator
 ├── ui/                  # Streamlit app
 ├── data/                # Raw PDFs, eval set
+├── docs/                # Visual demo assets & screenshots
 ├── experiments/         # Results tables
 ├── docker/
 └── requirements.txt
