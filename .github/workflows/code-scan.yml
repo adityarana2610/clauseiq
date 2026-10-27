@@ -1,0 +1,18 @@
+name: "Code Scan & AI Fix Suggestions"
+
+on:
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  security-audit:
+    uses: menonkrishna57/Internal-Audit-App/.github/workflows/code-scan.yml@master
+    with:
+      scan_python: true
+      scan_javascript: false       
+      run_tests: false
+      python_dir: "app"            
+      fail_on_errors: false
+    secrets:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.INTERNALAUDITAPP }}
