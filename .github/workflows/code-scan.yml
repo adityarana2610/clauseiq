@@ -1,6 +1,8 @@
 name: "Code Scan & AI Fix Suggestions"
 
 on:
+  push:
+    branches: [main, master]
   pull_request:
     branches: [main, master]
   workflow_dispatch:
@@ -10,9 +12,9 @@ jobs:
     uses: menonkrishna57/Internal-Audit-App/.github/workflows/code-scan.yml@master
     with:
       scan_python: true
-      scan_javascript: false       
+      scan_javascript: false       # uber-clone is pure Python
       run_tests: false
-      python_dir: "app"            
+      python_dir: "app"            # your Python files are inside app/
       fail_on_errors: false
     secrets:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.INTERNALAUDITAPP }}
