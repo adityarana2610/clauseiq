@@ -1,6 +1,7 @@
 name: "Code Scan & AI Fix Suggestions"
 
 on:
+  # Triggers automatically as soon as you commit or push:
   push:
     branches: [main, master]
   pull_request:
@@ -12,9 +13,9 @@ jobs:
     uses: menonkrishna57/Internal-Audit-App/.github/workflows/code-scan.yml@master
     with:
       scan_python: true
-      scan_javascript: false       # uber-clone is pure Python
+      scan_javascript: false
       run_tests: false
-      python_dir: "app"            # your Python files are inside app/
+      python_dir: "app"
       fail_on_errors: false
     secrets:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.INTERNALAUDITAPP }}
